@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #cfe0f2;
+}
+
+/* ----------------------
+LOGIN PAGE
+----------------------- */
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login_page {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: inset -13px -13px 15px #ebebeb,
+        inset 13px 13px 15px #ffffff;
+}
+
+.login_panel {
+    width: 70%;
+    padding: 5%;
+}
+
+.login_panel h3 {
+    font-size: 34px;
+    padding-bottom: 10%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.login_panel form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.login_panel form div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.login_panel input {
+    width: 97%;
+    height: 37px;
+    padding-left: 3%;
+    border: 2.8px solid #00DAA1;
+    border-radius: 8px;
+}
+
+.login_panel button {
+    margin: 24px 0;
+    height: 40px;
+    background-color: #00DAA1;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 5px 5px 8px #ccc;
+    cursor: pointer;
+}
+
+.login_page button:hover {
+    background-color: #07bd8d;
+}
+
+/* ----------------------
+USER HOME PAGE
+----------------------- */
+
+#userHome main {
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+}
+
+.nav_section {
+    width: 20%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8%;
+    align-items: center;
+    box-shadow: inset -10px -10px 15px #ebebeb,
+        inset 10px 10px 15px #ffffff;
+
+}
+
+.title_top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+    padding-top: 30%;
+}
+
+.title_top h2 {
+    font-size: 30px;
+    color: #233A3B;
+}
+
+.title_top span {
+    font-size: 100px;
+}
+
+.nav_section ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    list-style: none;
+    padding: 3%;
+    text-align: center;
+    width: 200px;
+    color: #233A3B;
+}
+
+.nav_section li {
+    text-decoration: none;
+    padding: 6% 8%;
+    display: flex;
+    column-gap: 8px;
+}
+
+.nav_section li i {
+    font-size: 22px;
+    padding-right: 5%;
+    padding-left: 2%;
+}
+
+.nav_section a {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+.nav_section .fa-home {
+    color: #fff;
+}
+
+.nav_section .link_userHome {
+    background: #00DAA1;
+    border-radius: 25px;
+    text-shadow: 1px 1px 2px gray;
+}
+
+.nav_section .link_userHome a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav_section button {
+    width: 75%;
+    height: 36px;
+    background-color: #bbb;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin-top: 20px;
+}
+
+.user_dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 8%;
+    width: 70%;
+}
+
+.user_dashboard h3 {
+    font-size: 24px;
+    padding-bottom: 3%;
+}
+
+.user_panel {
+    height: 50vh;
+    border-radius: 8px;
+    background: #ffffff;
+    /* box-shadow: inset -8px -8px 15px #ebebeb,
+        inset 8px 8px 15px #ffffff; */
+    border: #bbb;
+    padding: 5%;
+
+}
+
+.user_panel table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.user_panel th {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 2%;
+
+}
+
+.user_panel th:nth-child(1) {
+    width: 8%;
+}
+
+.user_panel th:nth-child(2) {
+    width: 16%;
+}
+
+.user_panel th:nth-child(3) {
+    width: 10%;
+}
+
+.user_panel th:nth-child(4) {
+    width: 30%;
+}
+
+.user_panel th:nth-child(5) {
+    width: 10%;
+}
+
+.user_panel th:nth-child(6) {
+    width: 10%;
+}
+
+.user_panel tbody td {
+    padding: 20px 10px 0 0;
+}
+
+/* ----------------------
+USER EDIT PROFILE
+----------------------- */
