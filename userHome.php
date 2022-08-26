@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body id="userHome">
     <main>
@@ -29,7 +29,7 @@
         <section class="user_dashboard">
             <h3>Booked Trip</h3>
             <div class="user_panel">
-                <table>
+                <!-- <table>
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -50,7 +50,7 @@
                             <td>$ 500</td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
             </div>
         </section>
     </main>
