@@ -1,3 +1,11 @@
+<?php
+    include './config.php';
+    session_start();
+    if(!isset($_SESSION['userData'])){
+        header("Location:http://localhost/PHP/M2J/EditUser.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,31 +32,47 @@
         <section class="right">
             <h1>Edit User</h1>
             <?php
-                function loadData($employeeData){
-                    echo "<table><tr><th>EmployeeID</th><th>FirstName</th><th>LastName</th><th>Department</th></tr>";
-                    foreach($employeeData as $idx=>$employee){
-                        echo "<tr><td>$employee->EmployeeID</td><td>$employee->first_name</td><td>$employee->last_name</td><td>$employee->Department</td><td><a href='./editEmployee.php?idx=$idx'>Edit</a></td><td><a href='./deleteEmployee.php?idx=$idx'>Delete</a></td></tr>";
-                    }
-                    echo "</table>";
-                }
-                $fileHandler = fopen('./files/employeeData.json','r');
-                $data = fread($fileHandler,filesize('./files/employeeData.json'));
-                fclose($fileHandler);
-                $employeeData = json_decode($data);
                 if($_SERVER['REQUEST_METHOD']=="POST"){
-                    $tmpEmployee['first_name'] = $_POST['fname'];
-                    $tmpEmployee['last_name'] = $_POST['lname'];
-                    $tmpEmployee['Department'] = $_POST['Department'];
-                    array_push($employeeData,$tmpEmployee);
-                    $newData = json_encode($employeeData);
-                    $fileHandler = fopen('./files/employeeData.json','w');
-                    fwrite($fileHandler,$newData);
-                    fclose($fileHandler);
-                    loadData(json_decode($newData));
-                }else{
-                    loadData($employeeData);
+                    $dbcon = new mysqli($dbServername, $dbUsername, $dbPass, $dbname);
+                    $updateCmd = "UPDATE user_tb SET firstName='".$_POST['firstName']."', lastName='".$_POST['lastName']."', email='".$_POST['email']."', pass='".$_POST['pass']."', dob='".$_POST['dob']."', phone='".$_POST['phone']."', addr='".$_POST['addr']."' WHERE user_id=".$_POST['user_id'];
+                    
+                    
+                    if($dbcon->query($updateCmd) === true){
+                        $dbcon->close();
+                        unset($_SESSION['userData']);
+                        header("Location:http://localhost/PHP/M2J/EditAdmin.php");
+                    }
                 }
             ?>
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <?php
+                    foreach($_SESSION['userData'] as $fieldName=>$value){
+                        $label = $fieldName;
+                        switch($fieldName){
+                            case "dob":
+                                $type = "date";
+                                $label = "date of birth";
+                            break;
+                            case "email":
+                                $type = "email";
+                            break;
+                            case "phone":
+                                $type = "tel";
+                            break;
+                            case "pass":
+                                $type = "password";
+                                $label = "password";
+                            break;
+                            default:
+                                $type = "text";
+                        }
+                        echo "<label for='$fieldName'>$label</label>";
+                        echo "<input type='$type' name='$fieldName' value='$value' required/></br>";
+                       
+                    }
+                ?>
+                <button type="submit">Update</button>
+            </form>
         </section>
     </main>
 </body>
