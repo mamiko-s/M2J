@@ -1,3 +1,8 @@
+<?php
+    include './config.php';
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,15 +30,19 @@
         <h1>Create New Account</h1>
         <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <label for="fname">First Name:</label> 
-            <input type="text" name="fname" placeholder="Enter a First Name"/>
+            <input name="fname" placeholder="Enter a First Name"/>
             <label for="lname">Last Name:</label> 
-            <input type="text" name="lname" placeholder="Enter a Last Name"/>
+            <input name="lname" placeholder="Enter a Last Name"/>
             <label for="email">Email:</label> 
-            <input type="email" name="email" placeholder="Enter a Email"/>
+            <input type="email" placeholder="Enter a Email"/>
             <label for="password">Password:</label> 
-            <input type="text" name="password" placeholder="Enter a Password"/>
+            <input type="password" name="password" placeholder="Enter a Password"/>
+            <label for="dob">Date of birth:</label>
+            <input type="date" name="dob" require/>
             <label for="phone">Phone:</label> 
             <input type="text" name="phone" placeholder="Enter a Phone Number"/>
+            <label for="addr">Address:</label>
+            <input name="addr" require/>
             <label for="UserType">Type of User:</label> 
             <select name="UserType">
                 <option value="admin">Admin</option>
@@ -41,6 +50,26 @@
             </select>
             <button type="submit">Sign Up</button>
         </form>
+        <?php
+            if($_SERVER['REQUEST_METHOD'] == "POST"){
+                $dbCon = new mysqli($dbServername, $dbUsername, $dbPass, $dbname);
+                if($dbCon->connect_error){
+                    die ("Connection error ".$dbCon->connect_error);
+                }else{
+                    $dbPass = password_hash($_POST['pass'],PASSWORD_BCRYPT,["cost"=>9]);
+                    $insertCmd = "INSERT INTO user_tb (firstName,lastName,email,pass,dob,phone,addr) VALUES ('".$_POST['fname']."','".$_POST['lname']."','".$_POST['email']."','".$dbPass."','".$_POST['dob']."','".$_POST['phone']."','".$_POST['addr']."')";
+                    $result = $dbCon->query($insertCmd);
+                    if($result === true){
+                        echo "<h1 style='color: green;'>DONE!!!</h1>";
+                    }else{
+                        echo "<h1 style='color: red;'>".$dbCon->error."</h1>";
+                    }
+
+                    $dbCon->close();
+                }
+            }
+        ?>
     </section>
+    
 </body>
 </html>
