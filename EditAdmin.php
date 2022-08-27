@@ -62,6 +62,7 @@
                         <th>email</th>
                         <th>Date of birth</th>
                         <th>Phone</th>
+                        <th>User Type</th>
                         <th colspan="2">Actions</th>
                     </tr>
                 </thead>
@@ -81,6 +82,7 @@
                                 echo "<td>".$row['dob']."</td>";
                                 echo "<td>".$row['email']."</td>";
                                 echo "<td>".$row['phone']."</td>";
+                                echo "<td>".$row['usertype']."</td>";
                                 echo "<td><a class='btn' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=edit'>Edit</a></td>";
                                 echo "<td><a class='btn' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=del'>Delete</a></td>";
                                 echo "</tr>";
