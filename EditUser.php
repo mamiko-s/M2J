@@ -34,7 +34,7 @@
             <?php
                 if($_SERVER['REQUEST_METHOD']=="POST"){
                     $dbcon = new mysqli($dbServername, $dbUsername, $dbPass, $dbname);
-                    $updateCmd = "UPDATE user_tb SET firstName='".$_POST['firstName']."', lastName='".$_POST['lastName']."', email='".$_POST['email']."', pass='".$_POST['pass']."', dob='".$_POST['dob']."', phone='".$_POST['phone']."', addr='".$_POST['addr']."' WHERE user_id=".$_POST['user_id'];
+                    $updateCmd = "UPDATE user_tb SET firstName='".$_POST['firstName']."', lastName='".$_POST['lastName']."',  dob='".$_POST['dob']."', email='".$_POST['email']."', pass='".$_POST['pass']."', phone='".$_POST['phone']."', addr='".$_POST['addr']."' WHERE user_id=".$_POST['user_id'];
                     
                     
                     if($dbcon->query($updateCmd) === true){

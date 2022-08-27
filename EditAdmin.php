@@ -78,8 +78,8 @@
                                 echo "<tr>";
                                 echo "<td>".$row['user_id']."</td>";
                                 echo "<td>".$row['firstName']." ".$row['lastName']."</td>";
-                                echo "<td>".$row['email']."</td>";
                                 echo "<td>".$row['dob']."</td>";
+                                echo "<td>".$row['email']."</td>";
                                 echo "<td>".$row['phone']."</td>";
                                 echo "<td><a class='btn' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=edit'>Edit</a></td>";
                                 echo "<td><a class='btn' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=del'>Delete</a></td>";
