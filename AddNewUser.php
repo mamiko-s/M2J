@@ -12,41 +12,62 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/AddNewUser.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
-    <section class="left">
-        <h2>UserName</h2>
-        <i class="fa-solid fa-user"></i>
+    <section class="nav_section">
+        <div class="title_top">
+            <h2>M2J Trip</h2>
+            <span><i class="fas fa-user-circle"></i></span>
+            <p>User Name</p>
+        </div>
         <ul>
-            <li><i class="fa-solid fa-house-user"></i><a href="#">ADMIN HOME</a></li>
-            <li><i class="fa-solid fa-user"></i><a href="#">ADD NEW USER</a></li>
-            <li><i class="fa-solid fa-user-pen"></i><a href="#">EDIT USER</a></li>
-            <li><i class="fa-solid fa-map-location-dot"></i><a href="#">ADD NEW TOUR</a></li>
+            <li><i class="fas fa-home"></i><a href="adminHome.php">ADMIN HOME</a></li>
+            <li class="link_hover"><i class="fas fa-user-plus"></i><a href="AddNewUser.php">ADD NEW USER</a></li>
+            <li><i class="fas fa-edit"></i><a href="EditUser.php">EDIT USER</a></li>
+            <li><i class="fa-solid fa-map-location-dot"></i><a href="AddNewTour.php">ADD NEW TOUR</a></li>
         </ul>
-        <a href="#">LOGOUT</a>
+        <button type="submit">LOGOUT</button>
     </section>
-    <section class="right">
+
+    <section class="panel_section">
         <h1>Create New Account</h1>
         <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <label for="fname">First Name:</label> 
-            <input name="fname" placeholder="Enter a First Name"/>
-            <label for="lname">Last Name:</label> 
-            <input name="lname" placeholder="Enter a Last Name"/>
-            <label for="dob">Date of birth:</label>
-            <input type="date" name="dob" require/>
-            <label for="email">Email:</label> 
-            <input type="email" name="email" placeholder="Enter a Email"/>
-            <label for="password">Password:</label> 
-            <input type="password" name="pass" placeholder="Enter a Password"/>
-            <label for="phone">Phone:</label> 
-            <input type="text" name="phone" placeholder="Enter a Phone Number"/>
-            <label for="UserType">Type of User:</label> 
-            <select name="usertype">
-                <option value="admin">Admin</option>
-                <option value="user">User</option>
-            </select>
-            <button type="submit">Sign Up</button>
+            <div>
+                <label for="fname">First Name</label> 
+                <input name="fname" placeholder="Enter a First Name"/>
+            </div>
+            <div>
+                <label for="lname">Last Name</label> 
+                <input name="lname" placeholder="Enter a Last Name"/>
+            </div>
+            <div>
+                <label for="dob">Date of birth</label>
+                <input type="date" name="dob" require/>
+            </div>
+            <div>
+                <label for="email">Email</label> 
+                <input type="email" name="email" placeholder="Enter a Email"/>
+            </div>
+            <div>
+                <label for="password">Password</label> 
+                <input type="password" name="pass" placeholder="Enter a Password"/>
+            </div>
+            <div>
+                <label for="phone">Phone</label> 
+                <input type="text" name="phone" placeholder="Enter a Phone Number"/>
+            </div>
+            <div>
+            <label for="UserType">Type of User</label> 
+                <select name="usertype">
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+            </div>
+            <button type="submit">Register</button>
         </form>
         <?php
             if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -68,6 +89,6 @@
             }
         ?>
     </section>
-    
+</main>
 </body>
 </html>

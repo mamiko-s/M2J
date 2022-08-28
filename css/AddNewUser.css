@@ -3,86 +3,172 @@
     margin: 0;
 }
 
+body {
+    background-color: #f9f9f9;
+}
+
 main {
     display: flex;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
-.left {
-    width: 25%;
-    background-color: whitesmoke;
+/* ----------------------
+ADIMIN ADD NEW USER
+----------------------- */
+
+#userHome main {
+    display: flex;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.nav_section {
+    min-width: 230px;
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
+    row-gap: 4%;
     align-items: center;
-    row-gap: 10vh;
-    padding-top: 15vh;
 }
 
-.left > i {
-    font-size: 48px;
-    border: solid 2px dimgray;
-    border-radius: 50%;
-    padding: 5vh;
+.title_top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+    padding-top: 25%;
 }
 
-.left > a {
-    font-size: 24px;
-    color: whitesmoke;
+.title_top h2 {
+    font-size: 30px;
+    color: #233A3B;
+}
+
+.title_top span {
+    font-size: 100px;
+}
+
+.nav_section ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    list-style: none;
+    text-align: center;
+    width: 195px;
+    color: #233A3B;
+}
+
+.nav_section li {
     text-decoration: none;
-    background-color: dimgray;
-    padding: 2vh 5vh;
-}
-
-ul {
-    list-style-type: none;
+    padding: 5% 8%;
     display: flex;
-    flex-direction: column;
-    row-gap: 5vh;
+    column-gap: 3px;
 }
 
-li {
-    display: flex;
-    align-items: center;
-    column-gap: 5vh;
+.nav_section li i {
+    font-size: 22px;
+    padding-right: 5%;
+    padding-left: 2%;
 }
 
-li > i {
-    font-size: 34px;
-}
-
-li > a {
-    font-size: 24px;
+.nav_section a {
+    text-decoration: none;
+    font-size: 16px;
     color: black;
-    text-decoration: none;
 }
 
-.right {
-    background-color: rgb(185, 213, 245);
-    padding: 5%;
-    width: 65%;
+.nav_section .fa-user-plus {
+    color: #fff;
+}
+
+.nav_section .link_hover {
+    background: #00DAA1;
+    border-radius: 24px;
+    text-shadow: 1px 1px 2px gray;
+}
+
+.nav_section .link_hover a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav_section button {
+    width: 75%;
+    height: 36px;
+    background-color: #bbb;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 20%);
+
+}
+
+.panel_section {
+    background-color: #D5E2F1;
+    margin: 3% 3% 3% 1%;
+    border-radius: 12px;
+    padding: 8% 15%;
+    width: 75%;
     display: flex;
     flex-direction: column;
-    row-gap: 5vh;
+    row-gap: 30px;
+    box-shadow: 18px 18px 40px #b5c0cd,
+        -18px -18px 40px #f5ffff;
 }
 
-form {
-    width: 60%;
-    background-color: whitesmoke;
-    padding: 5%;
+.panel_section form {
+    background-color: #fff;
+    padding: 10% 15%;
     display: flex;
     flex-direction: column;
-    row-gap: 1vh;
+    row-gap: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 5px 8px rgb(0 0 0 / 20%);
+
 }
 
-label {
-    font-size: 24px;
+.panel_section div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
 }
 
-input, button, select {
-    padding: 2%;
+.panel_section label {
+    text-indent: 3px;
+    font-size: 17px;
 }
 
-button {
-    margin-top: 10%;
-    width: 50%;
+.panel_section input,
+.panel_section select {
+    width: 95%;
+    height: 37px;
+    padding-left: 3%;
+    border: 2.5px solid #00DAA1;
+    border-radius: 8px;
+    background-color: #f5f9f8;
 }
 
+.panel_section select {
+    width: 100%;
+    height: 45px;
+}
+
+.panel_section button {
+    margin: 8% 0;
+    height: 42px;
+    background-color: #01d099;
+    border: none;
+    color: #fff;
+    text-shadow: 2px 2px 4px gray;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 5px 5px 8px #ccc;
+    cursor: pointer;
+}
+
+.panel_section button:hover {
+    background-color: #0fbb8d;
+
+}
