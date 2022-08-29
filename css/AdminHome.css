@@ -145,6 +145,10 @@ ADIMIN HOME
 
 }
 
+.panel_section table tr:nth-child(even) td {
+    background-color: whitesmoke;
+}
+
 .panel_section th {
     background-color: #EBEEF1;
     height: 40px;
@@ -154,11 +158,11 @@ ADIMIN HOME
 }
 
 .panel_section tr {
-    border-top: 1px solid #ccc;
+    border-top: 0.5px solid #ccc;
 }
 
 
 .panel_section td {
-    height: 40px;
+    height: 55px;
     padding-left: 2.5%;
 }
