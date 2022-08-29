@@ -13,6 +13,7 @@
 <main>
     <section class="left">
         <h2>UserName</h2>
+        <
         <i class="fa-solid fa-user"></i>
         <ul>
             <li><i class="fa-solid fa-house-user"></i><a href="#">ADMIN HOME</a></li>
