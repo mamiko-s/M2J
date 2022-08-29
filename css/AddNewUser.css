@@ -105,16 +105,21 @@ ADIMIN ADD NEW USER
 }
 
 .panel_section {
-    background-color: #D5E2F1;
+    background-color: #D5E3F1;
     margin: 3% 3% 3% 1%;
-    border-radius: 12px;
-    padding: 8% 15%;
+    border-radius: 15px;
+    padding: 7% 15%;
     width: 75%;
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 35px;
     box-shadow: 18px 18px 40px #b5c0cd,
         -18px -18px 40px #f5ffff;
+}
+
+.panel_section h1 {
+    text-align: center;
+    font-size: 28px;
 }
 
 .panel_section form {
@@ -122,8 +127,8 @@ ADIMIN ADD NEW USER
     padding: 10% 15%;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
-    border-radius: 25px;
+    row-gap: 22px;
+    border-radius: 20px;
     box-shadow: 0px 5px 8px rgb(0 0 0 / 20%);
 
 }
@@ -131,39 +136,41 @@ ADIMIN ADD NEW USER
 .panel_section div {
     display: flex;
     flex-direction: column;
-    row-gap: 8px;
+    row-gap: 5px;
 }
 
 .panel_section label {
     text-indent: 3px;
-    font-size: 17px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
 .panel_section input,
 .panel_section select {
-    width: 95%;
-    height: 37px;
-    padding-left: 3%;
-    border: 2.5px solid #00DAA1;
-    border-radius: 8px;
-    background-color: #f5f9f8;
+    width: 90%;
+    height: 40px;
+    padding: 0 3%;
+    border: 0.8px solid gray;
+    border-radius: 5px;
+    background-color: #F2F1F5;
+    font-size: 14px;
 }
 
 .panel_section select {
-    width: 100%;
-    height: 45px;
+    width: 96%;
+    height: 40px;
 }
 
 .panel_section button {
-    margin: 8% 0;
-    height: 42px;
-    background-color: #01d099;
+    margin: 8% 16%;
+    height: 45px;
+    background-color: #00DAA1;
     border: none;
     color: #fff;
     text-shadow: 2px 2px 4px gray;
-    border-radius: 8px;
+    border-radius: 25px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 18px;
     box-shadow: 5px 5px 8px #ccc;
     cursor: pointer;
 }

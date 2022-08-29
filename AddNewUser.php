@@ -38,11 +38,11 @@
         <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <div>
                 <label for="fname">First Name</label> 
-                <input name="fname" placeholder="Enter a First Name"/>
+                <input name="fname" placeholder="Enter your first name"/>
             </div>
             <div>
                 <label for="lname">Last Name</label> 
-                <input name="lname" placeholder="Enter a Last Name"/>
+                <input name="lname" placeholder="Enter your last name"/>
             </div>
             <div>
                 <label for="dob">Date of birth</label>
@@ -50,15 +50,15 @@
             </div>
             <div>
                 <label for="email">Email</label> 
-                <input type="email" name="email" placeholder="Enter a Email"/>
+                <input type="email" name="email" placeholder="Enter your email"/>
             </div>
             <div>
                 <label for="password">Password</label> 
-                <input type="password" name="pass" placeholder="Enter a Password"/>
+                <input type="password" name="pass" placeholder="Enter a password"/>
             </div>
             <div>
                 <label for="phone">Phone</label> 
-                <input type="text" name="phone" placeholder="Enter a Phone Number"/>
+                <input type="text" name="phone" placeholder="Enter your phone number"/>
             </div>
             <div>
             <label for="UserType">Type of User</label> 
