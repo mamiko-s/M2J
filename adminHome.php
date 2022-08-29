@@ -51,7 +51,7 @@
                     <tr>
                         <th width="10%">User ID</th>
                         <th width="20%">Full name</th>
-                        <th width="23%">email</th>
+                        <th width="23%">Email</th>
                         <th width="16%">Date of birth</th>
                         <th width="16%">Phone</th>
                         <th width="15%">User Type</th>
