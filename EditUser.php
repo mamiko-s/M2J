@@ -15,22 +15,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/EditUser.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-        <section class="left">
-            <h2>UserName</h2>
-            <i class="fa-solid fa-user"></i>
+        <section class="nav_section">
+            <div class="title_top">
+                <h2>M2J Trip</h2>
+                <span><i class="fas fa-user-circle"></i></span>
+                <p>User Name</p>
+            </div>
             <ul>
-                <li><i class="fa-solid fa-house-user"></i><a href="#">ADMIN HOME</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="#">ADD NEW USER</a></li>
-                <li><i class="fa-solid fa-user-pen"></i><a href="#">EDIT USER</a></li>
-                <li><i class="fa-solid fa-map-location-dot"></i><a href="#">ADD NEW TOUR</a></li>
+                <li><i class="fas fa-home"></i><a href="adminHome.php">ADMIN HOME</a></li>
+                <li><i class="fas fa-user-plus"></i><a href="AddNewUser.php">ADD NEW USER</a></li>
+                <li class="link_hover"><i class="fas fa-edit"></i><a href="EditAdmin.php">EDIT USER</a></li>
+                <li><i class="fa-solid fa-map-location-dot"></i><a href="AddNewTour.php">ADD NEW TOUR</a></li>
             </ul>
-            <a href="#">LOGOUT</a>
+            <button type="submit">LOGOUT</button>
         </section>
-        <section class="right">
-            <h1>Edit User</h1>
+
+        <section class="panel_section">
+            <div class="edit_panel">
+            <h1>Edit User Information</h1>
             <?php
                 if($_SERVER['REQUEST_METHOD']=="POST"){
                     $dbcon = new mysqli($dbServername, $dbUsername, $dbPass, $dbname);
@@ -51,28 +59,30 @@
                         switch($fieldName){
                             case "dob":
                                 $type = "date";
-                                $label = "date of birth";
+                                $label = "Date of birth";
                             break;
                             case "email":
                                 $type = "email";
+                                $label = "Email";
                             break;
                             case "phone":
                                 $type = "tel";
                             break;
                             case "pass":
                                 $type = "password";
-                                $label = "password";
+                                $label = "Password";
                             break;
                             default:
                                 $type = "text";
                         }
                         echo "<label for='$fieldName'>$label</label>";
-                        echo "<input type='$type' name='$fieldName' value='$value' required/></br>";
+                        echo "<input type='$type' name='$fieldName' value='$value' required/>";
                        
                     }
                 ?>
                 <button type="submit">Update</button>
             </form>
+            </div>
         </section>
     </main>
 </body>

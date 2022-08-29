@@ -38,35 +38,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/EditUser.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-        <section class="left">
-            <h2>UserName</h2>
-            <i class="fa-solid fa-user"></i>
+        <section class="nav_section">
+            <div class="title_top">
+                <h2>M2J Trip</h2>
+                <span><i class="fas fa-user-circle"></i></span>
+                <p>User Name</p>
+            </div>
             <ul>
-                <li><i class="fa-solid fa-house-user"></i><a href="#">ADMIN HOME</a></li>
-                <li><i class="fa-solid fa-user"></i><a href="#">ADD NEW USER</a></li>
-                <li><i class="fa-solid fa-user-pen"></i><a href="#">EDIT USER</a></li>
-                <li><i class="fa-solid fa-map-location-dot"></i><a href="#">ADD NEW TOUR</a></li>
+                <li><i class="fas fa-home"></i><a href="adminHome.php">ADMIN HOME</a></li>
+                <li><i class="fas fa-user-plus"></i><a href="AddNewUser.php">ADD NEW USER</a></li>
+                <li class="link_hover"><i class="fas fa-edit"></i><a href="EditAdmin.php">EDIT USER</a></li>
+                <li><i class="fa-solid fa-map-location-dot"></i><a href="AddNewTour.php">ADD NEW TOUR</a></li>
             </ul>
-            <a href="#">LOGOUT</a>
+            <button type="submit">LOGOUT</button>
         </section>
-        <section class="right">
-            <h1>Edit User</h1>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>User ID</th>
-                        <th>Full name</th>
-                        <th>email</th>
-                        <th>Date of birth</th>
-                        <th>Phone</th>
-                        <th>User Type</th>
-                        <th colspan="2">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
+        
+        <section class="panel_section">
+            <h2>User Information</h2>
+            <article>
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="5%">ID</th>
+                            <th width="18%">Full name</th>
+                            <th width="20%">Email</th>
+                            <th width="14%">Date of birth</th>
+                            <th width="14%">Phone</th>
+                            <th width="13%">User Type</th>
+                            <th width="15%" colspan="2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <?php
                         $dbcon = new mysqli($dbServername, $dbUsername, $dbPass, $dbname);
                         if($dbcon->connect_error){
@@ -79,19 +87,20 @@
                                 echo "<tr>";
                                 echo "<td>".$row['user_id']."</td>";
                                 echo "<td>".$row['firstName']." ".$row['lastName']."</td>";
-                                echo "<td>".$row['dob']."</td>";
                                 echo "<td>".$row['email']."</td>";
+                                echo "<td>".$row['dob']."</td>";
                                 echo "<td>".$row['phone']."</td>";
                                 echo "<td>".$row['usertype']."</td>";
-                                echo "<td><a class='btn' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=edit'>Edit</a></td>";
-                                echo "<td><a class='btn' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=del'>Delete</a></td>";
+                                echo "<td><a class='btn_edit' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=edit'><i class='fas fa-edit'></i></a></td>";
+                                echo "<td><a class='btn_delete' href='".$_SERVER['PHP_SELF']."?id=".$row['user_id']."&action=del'><i class='fas fa-trash-alt'></i></a></td>";
                                 echo "</tr>";
                             }
                             $dbcon->close();
                         }
                     ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </article>
         </section>
     </main>
 </body>
