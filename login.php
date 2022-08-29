@@ -13,6 +13,7 @@
 <body id="login">
     <section class="login_page">
         <div class="login_panel">
+            
             <h3>
                 Welcome to M2J Trip!
             </h3>
