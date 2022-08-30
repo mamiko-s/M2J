@@ -47,18 +47,18 @@
             <h3>User Information</h3>
             <article>
                 <table>
-                <thead>
-                    <tr>
-                        <th width="10%">User ID</th>
-                        <th width="20%">Full name</th>
-                        <th width="23%">Email</th>
-                        <th width="16%">Date of birth</th>
-                        <th width="16%">Phone</th>
-                        <th width="15%">User Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+                    <thead>
+                        <tr>
+                            <th width="10%">User ID</th>
+                            <th width="20%">Full name</th>
+                            <th width="23%">Email</th>
+                            <th width="16%">Date of birth</th>
+                            <th width="16%">Phone</th>
+                            <th width="15%">User Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
                         $dbcon = new mysqli($dbServername, $dbUsername, $dbPass, $dbname);
                         if($dbcon->connect_error){
                             die("Connection error");
@@ -79,26 +79,26 @@
                             $dbcon->close();
                         }
                     ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
             </article>
-            
+
             <h3>Destinations</h3>
             <article>
                 <table>
-                <thead>
-                    <tr>
-                        <th width="10%">Id</th>
-                        <th width="15%">Destination</th>
-                        <th width="5%">Image</th>
-                        <th width="30%">Explanation</th>
-                        <th width="20%">Duration</th>
-                        <th width="20%">Price</th>
+                    <thead>
+                        <tr>
+                            <th width="10%">Id</th>
+                            <th width="15%">Destination</th>
+                            <th width="5%">Image</th>
+                            <th width="30%">Explanation</th>
+                            <th width="20%">Duration</th>
+                            <th width="20%">Price</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
                         $dbcon = new mysqli($dbServername, $dbUsername, $dbPass, $dbname);
                         if($dbcon->connect_error){
                             die("Connection error");
@@ -119,10 +119,11 @@
                             $dbcon->close();
                         }
                         ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
             </article>
         </section>
-</main>    
+    </main>
 </body>
+
 </html>

@@ -26,7 +26,7 @@ ADIMIN HOME
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    row-gap: 5%;
+    row-gap: 45px;
     align-items: center;
 }
 
@@ -39,8 +39,9 @@ ADIMIN HOME
 }
 
 .title_top h2 {
-    font-size: 30px;
+    font-size: 28px;
     color: #233A3B;
+    text-shadow: 3px 3px 6px #bbb;
 }
 
 .title_top span {
@@ -81,7 +82,7 @@ ADIMIN HOME
 }
 
 .nav_section .link_hover {
-    background: #00DAA1;
+    background: #4b7dbe;
     border-radius: 24px;
     text-shadow: 1px 1px 2px gray;
 }
