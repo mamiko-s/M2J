@@ -58,7 +58,7 @@
             </div>
             <div>
                 <label for="price">Price</label>
-                <input class="price" name="price" required/>
+                <input class="duration"name="price" required/>
             </div>
                 <button type="submit">Register</button>
         </form>
