@@ -8,40 +8,59 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/AddNewTour.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
-    <section class="left">
-        <h2>UserName</h2>
-        <
-        <i class="fa-solid fa-user"></i>
-        <ul>
-            <li><i class="fa-solid fa-house-user"></i><a href="#">ADMIN HOME</a></li>
-            <li><i class="fa-solid fa-user"></i><a href="#">ADD NEW USER</a></li>
-            <li><i class="fa-solid fa-user-pen"></i><a href="#">EDIT USER</a></li>
-            <li><i class="fa-solid fa-map-location-dot"></i><a href="#">ADD NEW TOUR</a></li>
-        </ul>
-        <a href="#">LOGOUT</a>
+    <section class="nav_section">
+            <div class="title_top">
+                <h2>M2J Trip</h2>
+                <span><i class="fas fa-user-circle"></i></span>
+                <p>User Name</p>
+            </div>
+            <ul>
+                <li><i class="fas fa-home"></i><a href="adminHome.php">ADMIN HOME</a></li>
+                <li><i class="fas fa-user-plus"></i><a href="AddNewUser.php">ADD NEW USER</a></li>
+                <li><i class="fas fa-edit"></i><a href="EditUser.php">EDIT USER</a></li>
+                <li class="link_hover"><i class="fa-solid fa-map-location-dot"></i><a href="AddNewTour.php">ADD NEW TOUR</a></li>
+            </ul>
+            <button type="submit">LOGOUT</button>
     </section>
-    <section class="right">
+
+    <section class="panel_section">
+        <h1>Add New Tour</h1>
         <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
-            <label for="category">Category</label>
-            <select name="category">
-                <option>GUIDED TOURS</option>
-                <option>ATTRACTIONS + ACTIVITIES</option>
-                <option>FEATURED - PRODUCTS</option>
-            </select>
-            <label for="des_name">Destination</label>
-            <input name="des_name" required/>
-            <label for="des_img">Destination Img</label>
-            <input name="des_img" type="file" />
-            <label for="des_exp">Explanation</label>
-            <input name="des_exp" required/>
-            <label for="duration">Duration</label>
-            <input name="duration" required/>
-            <label for="price">Price</label>
-            <input name="price" required/>
-            <button type="submit">Register</button>
+            <div>
+                <label for="category">Category</label>
+                    <select class="category" name="category">
+                        <option>GUIDED TOURS</option>
+                        <option>ATTRACTIONS + ACTIVITIES</option>
+                        <option>FEATURED - PRODUCTS</option>
+                    </select>
+            </div>
+            <div>
+                <label for="des_name">Destination</label>
+                <input class="des_name" name="des_name" required/>
+            </div>
+            <div>
+                <label for="des_img">Destination Img</label>
+                <input class="des_img" name="des_img" type="file" />
+            </div>
+            <div>
+                <label for="des_exp">Explanation</label>
+                <textarea class="des_exp" name="des_exp" required/></textarea>
+            </div>
+            <div>
+                <label for="duration">Duration</label>
+                <input class="duration" name="duration" required/>
+            </div>
+            <div>
+                <label for="price">Price</label>
+                <input class="price" name="price" required/>
+            </div>
+                <button type="submit">Register</button>
         </form>
         <?php
         if($_SERVER['REQUEST_METHOD']=="POST"){
