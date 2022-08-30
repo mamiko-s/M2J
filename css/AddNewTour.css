@@ -76,7 +76,7 @@ ADIMIN ADD NEW TOUR
 }
 
 .nav_section .link_hover {
-    background: #00DAA1;
+    background: #4b7dbe;
     border-radius: 24px;
     text-shadow: 1px 1px 2px gray;
 }
@@ -171,7 +171,7 @@ textarea {
 .panel_section button {
     margin: 8% 16%;
     height: 45px;
-    background-color: #00DAA1;
+    background-color: #4b7dbe;
     border: none;
     color: #fff;
     text-shadow: 2px 2px 4px gray;
@@ -183,6 +183,6 @@ textarea {
 }
 
 .panel_section button:hover {
-    background-color: #0fbb8d;
+    background-color: #396db2;
 
 }
