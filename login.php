@@ -60,10 +60,11 @@
                             echo "<script>alert('Admin only');</script>";
                         }
                     }else{
-                        echo "<script>alert('User not valid1');</script>";
+                        echo "<script>alert('Invalid Username/Password. Please try again. ');</script>";
                     }
                 }else{
-                    echo "<script>alert('User not valid2');</script>";
+                    echo "<script>alert('Invalid Username/Password. Please try again. ');</script>";
+
                 }
             }
             $dbconn->close();

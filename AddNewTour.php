@@ -1,4 +1,16 @@
-<?php include './config.php'; ?>
+<?php 
+    include './config.php'; 
+    session_start();
+
+    if(isset($_GET['action'])){
+        if($_GET['action']=="logout"){
+            session_unset();
+            session_destroy();
+            header("Location: http://localhost/PHP/M2J/login.php");
+        }
+    }
+    include './session_check.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +38,9 @@
                 <li><i class="fas fa-edit"></i><a href="EditUser.php">EDIT USER</a></li>
                 <li class="link_hover"><i class="fa-solid fa-map-location-dot"></i><a href="AddNewTour.php">ADD NEW TOUR</a></li>
             </ul>
-            <button type="submit">LOGOUT</button>
+            <form method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <button type="submit" name="action" value="logout">LOGOUT</button>
+            </form>
     </section>
 
     <section class="panel_section">

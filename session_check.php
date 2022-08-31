@@ -18,13 +18,13 @@
                 if(!isset($_SESSION['user'])){
                     session_unset();
                     session_destroy();
-                    header("Location: http://localhost/PHP/M2J/M2J-adminHome/login.php");
+                    header("Location: http://localhost/PHP/M2J/login.php");
                 }
-        
+                $_SESSION['session_timeout'] = time() + 600;
             }else{
                 session_unset();
                 session_destroy();
-                header("Location: http://localhost/PHP/M2J/M2J-adminHome/login.php");
+                header("Location: http://localhost/PHP/M2J/login.php");
             }
         }
 
