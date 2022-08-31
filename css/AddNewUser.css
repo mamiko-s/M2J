@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+main {
+    display: flex;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ----------------------
+ADIMIN ADD NEW USER
+----------------------- */
+
+#userHome main {
+    display: flex;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.nav_section {
+    min-width: 230px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4%;
+    align-items: center;
+}
+
+.title_top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+    padding-top: 25%;
+}
+
+.title_top h2 {
+    font-size: 30px;
+    color: #233A3B;
+}
+
+.title_top span {
+    font-size: 100px;
+}
+
+.nav_section ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    list-style: none;
+    text-align: center;
+    width: 195px;
+    color: #233A3B;
+}
+
+.nav_section li {
+    text-decoration: none;
+    padding: 5% 8%;
+    display: flex;
+    column-gap: 3px;
+}
+
+.nav_section li i {
+    font-size: 22px;
+    padding-right: 5%;
+    padding-left: 1%;
+}
+
+.nav_section a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+
+.nav_section .fa-user-plus {
+    color: #fff;
+}
+
+.nav_section .link_hover {
+    background: #00DAA1;
+    border-radius: 24px;
+    text-shadow: 1px 1px 2px gray;
+}
+
+.nav_section .link_hover a {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav_section button {
+    width: 75%;
+    height: 36px;
+    background-color: #bbb;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 20%);
+
+}
+
+.panel_section {
+    background-color: #D5E3F1;
+    margin: 3% 3% 3% 1%;
+    border-radius: 15px;
+    padding: 7% 15%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    box-shadow: 18px 18px 40px #b5c0cd,
+        -18px -18px 40px #f5ffff;
+}
+
+.panel_section h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.panel_section form {
+    background-color: #fff;
+    padding: 10% 15%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 8px rgb(0 0 0 / 20%);
+
+}
+
+.panel_section div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.panel_section label {
+    text-indent: 3px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.panel_section input,
+.panel_section select {
+    width: 90%;
+    height: 40px;
+    padding: 0 3%;
+    border: 0.8px solid gray;
+    border-radius: 5px;
+    background-color: #F2F1F5;
+    font-size: 14px;
+}
+
+.panel_section select {
+    width: 96%;
+    height: 40px;
+}
+
+.panel_section button {
+    margin: 8% 16%;
+    height: 45px;
+    background-color: #00DAA1;
+    border: none;
+    color: #fff;
+    text-shadow: 2px 2px 4px gray;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 5px 5px 8px #ccc;
+    cursor: pointer;
+}
+
+.panel_section button:hover {
+    background-color: #0fbb8d;
+
+}
