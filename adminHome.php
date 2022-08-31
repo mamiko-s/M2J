@@ -123,7 +123,7 @@
                                 echo "<tr>";
                                 echo "<td>".$row['des_id']."</td>";
                                 echo "<td>".$row['des_name']."</td>";
-                                echo "<td>".$row['des_img']."</td>";
+                                echo "<td><img src='".$row['des_img']."'></td>";
                                 echo "<td>".$row['des_exp']."</td>";
                                 echo "<td>".$row['duration']."</td>";
                                 echo "<td>".$row['price']."</td>";
