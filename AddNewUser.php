@@ -97,7 +97,7 @@
                     $insertCmd = "INSERT INTO user_tb (firstName,lastName,dob,email,pass,phone,usertype,session_ID) VALUES ('".$_POST['fname']."','".$_POST['lname']."','".$_POST['dob']."','".$_POST['email']."','".$dbPass."','".$_POST['phone']."','".$_POST['usertype']."','1')";
                     $result = $dbCon->query($insertCmd);
                     if($result === true){
-                        echo "<h1 style='color: green;'>DONE!!!</h1>";
+                        echo "<script>alert('Registered');</script>";
                     }else{
                         echo "<h1 style='color: red;'>".$dbCon->error."</h1>";
                     }

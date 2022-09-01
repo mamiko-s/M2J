@@ -25,13 +25,13 @@
             <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div>
                     <label for="username">User Name</label> 
-                    <input type="email" name="username" placeholder="Enter your username"/>
+                    <input style="border:2.5px solid #6a7783; background-color: #F2F1F5;" type="email" name="username" placeholder="Enter your username"/>
                 </div>
                 <div>
                     <label for="pass">Password</label> 
-                    <input type="password" name="pass" placeholder="Enter your password"/>
+                    <input style="border:2.5px solid #6a7783; background-color: #F2F1F5;" type="password" name="pass" placeholder="Enter your password"/>
                 </div>
-                <button type="submit">Sign in</button>
+                <button style="background-color: #6a7783; border-radius: 8px;" type="submit">Sign in</button>
             </form>
         </div>
     </section>

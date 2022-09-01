@@ -100,7 +100,7 @@ main {
 .nav_section ul {
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
+    row-gap: 20px;
     list-style: none;
     text-align: center;
     width: 195px;

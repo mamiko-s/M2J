@@ -102,7 +102,7 @@
                         }else{
                             $insertCmd = "INSERT INTO destination_tb (category,des_name,des_img,des_exp,duration,price) VALUES ('$category','$des_name','$imgDest','$des_exp','$duration','$price')";
                             if($dbcon->query($insertCmd)===TRUE){
-                                echo "<h1>New Tour is registered</h1>";
+                                echo "<script>alert('New Tour is Registered');</script>";
                             }else{
                                 echo "<h1>Tour is not registered</h1>".$dbcon->error;
                             }
