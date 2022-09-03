@@ -31,7 +31,7 @@
                     <label for="pass">Password</label> 
                     <input style="border:2.5px solid #6a7783; background-color: #F2F1F5;" type="password" name="pass" placeholder="Enter your password"/>
                 </div>
-                <button style="background-color: #6a7783; border-radius: 8px;" type="submit">Sign in</button>
+                <button style="background-color: #4c6c8d; border-radius: 8px;" type="submit">Sign in</button>
             </form>
         </div>
     </section>
