@@ -1,0 +1,63 @@
+/* ----------------------
+ADIMIN HOME
+----------------------- */
+
+.nav_section .fa-home {
+    color: #fff;
+}
+
+.panel_section h1 {
+    text-align: center;
+}
+
+.panel_section article {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1%;
+    border-radius: 7px;
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 20%);
+}
+
+.panel_section h3 {
+    margin: 6% 0 2% 0;
+}
+
+.panel_section .des-title {
+    margin-top: 8%;
+}
+
+.panel_section div {
+    background-color: #fff;
+}
+
+.panel_section table {
+    background-color: #fff;
+    text-align: left;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-color: #EBEEF1;
+
+}
+
+.panel_section table tr:nth-child(even) td {
+    background-color: whitesmoke;
+}
+
+.panel_section th {
+    background-color: #EBEEF1;
+    height: 40px;
+    padding-left: 2.5%;
+    margin-bottom: 3%;
+    border-bottom: 2.5px solid #AEDDE7;
+}
+
+.panel_section tr {
+    border-top: 0.5px solid #ccc;
+}
+
+
+.panel_section td {
+    height: 55px;
+    padding-left: 2.5%;
+}

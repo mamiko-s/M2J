@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #cfe0f2;
+}
+
+/* ----------------------
+LOGIN PAGE
+----------------------- */
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login_page {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: inset -13px -13px 15px #ebebeb,
+        inset 13px 13px 15px #ffffff;
+}
+
+.login_panel {
+    width: 70%;
+    padding: 5%;
+}
+
+.login_panel h3 {
+    font-size: 34px;
+    padding-bottom: 10%;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.login_panel form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.login_panel form div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.login_panel input {
+    width: 97%;
+    height: 38px;
+    padding-left: 3%;
+    border: 2.8px solid #3B4856;
+    border-radius: 8px;
+}
+
+.login_panel button {
+    margin: 24px 0;
+    height: 40px;
+    background-color: #3B4856;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 5px 5px 8px #ccc;
+    cursor: pointer;
+}

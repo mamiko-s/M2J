@@ -1,0 +1,152 @@
+/* ----------------------
+ADIMIN EDIT USER HOME
+----------------------- */
+
+.nav_section .fa-edit {
+    color: #fff;
+}
+
+.panel_section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 7%;
+}
+
+.panel_section h2 {
+    text-align: center;
+    font-size: 26px;
+
+}
+
+.panel_section article {
+    min-width: 650px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1%;
+    border-radius: 7px;
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 20%);
+}
+
+.panel_section table {
+    background-color: #fff;
+    text-align: left;
+    border-collapse: collapse;
+    font-size: 14px;
+    border-color: #EBEEF1;
+
+}
+
+.panel_section table tr:nth-child(even) td {
+    background-color: whitesmoke;
+}
+
+.panel_section th {
+    background-color: #EBEEF1;
+    height: 40px;
+    padding-left: 2.5%;
+    border-bottom: 2.5px solid #AEDDE7;
+}
+
+.panel_section tr {
+    border-top: 0.5px solid #ccc;
+}
+
+.panel_section td {
+    height: 55px;
+    padding-left: 2.5%;
+}
+
+.btn_edit {
+    padding: 7px 11px;
+    background-color: #CEF4E9;
+    border: 1px solid #28a989;
+    border-radius: 4px;
+    margin-right: -14px;
+}
+
+.btn_edit i {
+    color: #28a989;
+    font-size: 18px;
+}
+
+.btn_delete {
+    padding: 7px 11px;
+    background-color: #FFD9DA;
+    border: 1px solid #ec7b7f;
+    border-radius: 4px;
+}
+
+.btn_delete i {
+    color: #ec7b7f;
+    font-size: 18px;
+}
+
+.last_td {
+    margin-right: 10%;
+}
+
+
+/* ----------------------
+ADIMIN EDIT USER PANEL
+----------------------- */
+
+.edit_panel {
+    margin: 2% 15%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.edit_panel h1 {
+    text-align: center;
+}
+
+.panel_section form {
+    background-color: #fff;
+    padding: 6% 17%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 8px rgb(0 0 0 / 20%);
+
+}
+
+.panel_section label {
+    margin-top: 16px;
+    text-indent: 3px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.panel_section input,
+.panel_section select {
+    width: 90%;
+    height: 35px;
+    padding: 0 3%;
+    border: 0.8px solid gray;
+    border-radius: 5px;
+    background-color: #F2F1F5;
+    font-size: 14px;
+}
+
+.panel_section select {
+    width: 96%;
+    height: 40px;
+}
+
+.panel_section button {
+    margin: 10% 16%;
+    height: 45px;
+    background-color: #4c6c8d;
+    border: none;
+    color: #fff;
+    text-shadow: 2px 2px 4px gray;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 5px 5px 8px #ccc;
+    cursor: pointer;
+}
